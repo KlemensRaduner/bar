@@ -2,19 +2,19 @@
 
 include 'db_connection.php';
 
-if (!empty($_POST)) {
+if (isset($_POST)) {
 
     $query = $conn->prepare("INSERT INTO users (username, password, salt) VALUES (?, ?, ?)");
 
-    $username = $_POST["username"];
+    $username = trim($_POST["username"]);
     $salt = uniqid(mt_rand(), true);
     $hashedpw = password_hash($_POST["password"] . $salt, PASSWORD_BCRYPT);
 
     $query->bind_param('sss', $username, $hashedpw, $salt);
     $query->execute();
 
-    header('Location:index.php?=registered', true, $statusCode);
+    header('Location:index.php?registered');
 } else {
-    header('Location:index.php', true, $statusCode);
+    header('Location:index.php');
     die();
 }

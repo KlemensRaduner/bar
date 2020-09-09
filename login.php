@@ -12,10 +12,9 @@ if (isset($_POST)) {
     $user = $query->get_result()->fetch_assoc();
 
     $password  = $user['password'];
-    $salt = $user['salt'];
 
 
-    if (password_verify($_POST['password'] . $salt, $password)) {
+    if (password_verify($_POST['password'], $password)) {
 
         $query = $conn->prepare("SELECT c.id FROM course c JOIN course_users cu on cu.course_id=c.id JOIN users u on u.id=cu.users_id  WHERE u.id= ? ");
         $query->bind_param('s', $user['id']);

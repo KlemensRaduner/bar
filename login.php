@@ -38,6 +38,9 @@ session_start();
 
 
 	?>
+
+<h1>MyBar Login</h1>
+
 <div class="login">
 	<form action="login_backend.php" method="POST">
 		Login:

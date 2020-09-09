@@ -1,6 +1,10 @@
 html {
   scroll-behavior: smooth;
 }
+h1{
+  margin-left: 7%;
+  margin-top: 5%;
+}
 .container-fluid {
   padding: 0;
   margin: 0;
@@ -34,8 +38,9 @@ html {
   color: gray !important;
 }
 .login {
-  padding-left: 10%;
-  padding-top: 5%;
+  padding-left: 7%;
+  padding-top: 2%;
+  margin-bottom: 2%;
 }
 #TopButton {
   display: none;

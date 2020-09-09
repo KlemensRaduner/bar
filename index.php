@@ -28,27 +28,27 @@ session_start();
 				<img src="images/bar.jpg" class="background-img">
 			</div>
 		</div>
-		<div calss="row our_drinks">
+		<div id="our_drinks" class="row">
 			<div class="col-md-12">
 				our drinks
 			</div>
 		</div>
-		<div calss="row ueber">
+		<div id=="ueber" class="row">
 			<div class="col-md-12">
 				<p style="height:400px">über</p>
 			</div>
 		</div>
-		<div calss="row galerie">
+		<div id=="galerie" class="row">
 			<div class="col-md-12">
 				<p style="height:400px">galerie</p>
 			</div>
 		</div>
-		<div calss="row mixology_events">
+		<div id=="mixology_events" class="row">
 			<div class="col-md-12">
 				<p style="height:400px">mixology_events </p>
 			</div>
 		</div>
-		<div calss="row kontakt">
+		<div id=="kontakt" class="row">
 			<div class="col-md-12">
 				kontakt
 			</div>

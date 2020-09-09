@@ -33,22 +33,22 @@ session_start();
 				our drinks
 			</div>
 		</div>
-		<div id=="ueber" class="row">
+		<div id="ueber" class="row">
 			<div class="col-md-12">
 				<p style="height:400px">über</p>
 			</div>
 		</div>
-		<div id=="galerie" class="row">
+		<div id="galerie" class="row">
 			<div class="col-md-12">
 				<p style="height:400px">galerie</p>
 			</div>
 		</div>
-		<div id=="mixology_events" class="row">
+		<div id="mixology_events" class="row">
 			<div class="col-md-12">
 				<p style="height:400px">mixology_events </p>
 			</div>
 		</div>
-		<div id=="kontakt" class="row">
+		<div id="kontakt" class="row">
 			<div class="col-md-12">
 				kontakt
 			</div>

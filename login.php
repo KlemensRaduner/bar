@@ -19,31 +19,11 @@ session_start();
 
 <body>
 
-	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-		<a class="navbar-brand" href="#">
-			<img src="images/logo_mybar.png" height="50">
-		</a>
-		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-			<span class="navbar-toggler-icon"></span>
-		</button>
-
-		<div class="collapse navbar-collapse" id="navbarSupportedContent">
-			<ul class="navbar-nav mr-auto">
-				<li class="nav-item"> <a class="nav-link" href="#">Home</a> </li>
-				<li class="nav-item"> <a class="nav-link" href="#our_drinks.html">Our Drinks</a> </li>
-				<li class="nav-item"> <a class="nav-link" href="#ueber">Über</a></li>
-				<li class="nav-item"> <a class="nav-link" href="#galerie">Galerie</a></li>
-				<li class="nav-item"> <a class="nav-link" href="#mixology_events">Mixology &amp Events</a></li>
-				<li class="nav-item"> <a class="nav-link" href="#kontakt">Kontakt</a></li>
-			</ul>
-			<ul class="navbar-nav">
-				<li class="nav-item"> <a class="nav-link" href="login.php">Login</a></li>
-				<li class="nav-item"> <a class="nav-link" href="register.php">Registrieren</a></li>
-			</ul>
-		</div>
-	</nav>
 
 	<?php
+
+  include 'navbar.php';
+
 	if (isset($_GET['loginfailed'])) {
 		echo '<div class="alert alert-primary" role="alert">
 				dum dum
@@ -61,8 +41,8 @@ session_start();
 
 	<form action="login.php" method="POST">
 		Login:
-		<input name="username" />
-		<input name="password" type="password">
+		<input name="username" placeholder="Username"/>
+		<input name="password" type="password" placeholder="Passwort"/>
 		<input type="submit" value="Login"/>
 	</form>
 

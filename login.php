@@ -38,8 +38,8 @@ session_start();
 
 
 	?>
-
-	<form action="login.php" method="POST">
+<div class="login">
+	<form action="login_backend.php" method="POST">
 		Login:
 		<input name="username" placeholder="Username"/>
 		<input name="password" type="password" placeholder="Passwort"/>
@@ -49,7 +49,7 @@ session_start();
 	<form action="logout.php" method="POST">
 		<input type="submit" value="Logout"/>
 	</form>
-
+</div>
 
 	<?php
 

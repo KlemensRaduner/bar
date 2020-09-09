@@ -18,30 +18,9 @@ session_start();
 </head>
 
 <body>
-
-	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-		<a class="navbar-brand" href="#">
-			<img src="images/logo_mybar.png" height="50">
-		</a>
-		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-			<span class="navbar-toggler-icon"></span>
-		</button>
-
-		<div class="collapse navbar-collapse" id="navbarSupportedContent">
-			<ul class="navbar-nav mr-auto">
-				<li class="nav-item"> <a class="nav-link" href="#">Home</a> </li>
-				<li class="nav-item"> <a class="nav-link" href="#our_drinks.html">Our Drinks</a> </li>
-				<li class="nav-item"> <a class="nav-link" href="#ueber">Über</a></li>
-				<li class="nav-item"> <a class="nav-link" href="#galerie">Galerie</a></li>
-				<li class="nav-item"> <a class="nav-link" href="#mixology_events">Mixology &amp Events</a></li>
-				<li class="nav-item"> <a class="nav-link" href="#kontakt">Kontakt</a></li>
-			</ul>
-			<ul class="navbar-nav">
-				<li class="nav-item"> <a class="nav-link" href="login.php">Login</a></li>
-				<li class="nav-item"> <a class="nav-link" href="register.php">Registrieren</a></li>
-			</ul>
-		</div>
-	</nav>
+	<?php
+	include 'navbar.php';
+	?>
 
 	<div class="container-fluid">
 		<div calss="row">
@@ -49,43 +28,32 @@ session_start();
 				<img src="images/bar.jpg" class="background-img">
 			</div>
 		</div>
+		<div calss="row our_drinks">
+			<div class="col-md-12">
+				our drinks
+			</div>
+		</div>
+		<div calss="row ueber">
+			<div class="col-md-12">
+				über
+			</div>
+		</div>
+		<div calss="row galerie">
+			<div class="col-md-12">
+				galerie
+			</div>
+		</div>
+		<div calss="row mixology_events">
+			<div class="col-md-12">
+				mixology_events
+			</div>
+		</div>
+		<div calss="row kontakt">
+			<div class="col-md-12">
+				kontakt
+			</div>
+		</div>
 	</div>
-
-	<?php
-	if (isset($_GET['loginfailed'])) {
-		echo '<div class="alert alert-primary" role="alert">
-				dum dum
-			</div>';
-	}
-
-	if (isset($_GET['registered'])) {
-		echo '<div class="alert alert-primary" role="alert">
-				A simple primary alert—check it out!
-			</div>';
-	}
-
-
-	?>
-
-	<form action="login.php" method="POST">
-		Login:
-		<input name="username" />
-		<input name="password" type="password" />
-		<input type="submit" />
-	</form>
-
-	<form action="register.php" method="POST">
-		Register:
-		<input name="username" />
-		<input name="password" type="password" />
-		<input type="submit" />
-	</form>
-
-
-	<form action="logout.php" method="POST">
-		<input type="submit" />
-	</form>
-
 
 	<?php
 

@@ -13,8 +13,9 @@
   object-fit: cover;
 }
 
-nav {
+.bg-black {
   font-size: large;
+  background-color: black !important;
 }
 #TopButton {
   display: none;

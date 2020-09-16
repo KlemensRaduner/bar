@@ -90,10 +90,7 @@ html {
 body {
   margin: 0;
 }
-.text {
-  text-align: center;
-  color: #333;
-}
+
 h1 {
   font-variant: small-caps;
   font-size: 25px;

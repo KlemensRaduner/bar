@@ -113,10 +113,8 @@ include 'navbar.php';
 						<h1>Mixkurse</h1>
 						<p>Ist Ihr Traum das Mixen und Servieren von selbstgemachten Drinks? Wir als myBar bieten für motivierte Anfänger oder Fortgeschrittene Teilnehmer unter fachkundiger Anleitung diverse Mixkurse. Im Kurs erhalten Sie alle Informationen rund um den Job des Bartenders (Barutensilien, Arbeitstechniken, etc.).<br>
 							<br>Feiern Sie Ihren Team-Event, Geburtstag oder Polterabend bei uns! Ein Besuch in der "myBar" lohnt sich und macht Ihren Event zum unvergesslichen Erlebnis. Weiterhin wird für das Wohl unserer Gäste natürlich tüchtig gesorgt, durstig verlässt uns Keiner. Sie können ganz einfach einen Termin bei uns vereinbaren. Die Mindestanzahl Teilnehmer beträgt 6 Personen, wobei der Preis pro Person CHF 100.- ist.<br>
-							<br>Anmeldung
-<<<<<<< HEAD
-							<a href="mailto:daniela@altorfer.org">daniela@altorfer.org</a><br>
-						  <?php
+							<br>
+							<?php
 							if (isset($_SESSION['user'])) {
 								echo "Sie sind angemeldet als " . $_SESSION['user']['username'];
 						  }else {
@@ -124,9 +122,6 @@ include 'navbar.php';
 								echo "<a href='register.php'>Registrieren</a>";
 						  }
 							 ?> </p><br>
-=======
-
->>>>>>> 84dcd460c48e5134242f1d22f2c888b5384b65be
 					</section>
 					<p></p>
 					<section id="kontakt">

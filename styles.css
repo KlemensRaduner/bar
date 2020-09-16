@@ -92,8 +92,6 @@ body {
 }
 .text {
   text-align: center;
-  margin: 30%;
-  margin: 30%;
   color: #333;
 }
 h1 {
@@ -119,7 +117,6 @@ footer {
   background-color: lightgray;
 }
 
-
 .carousel img {
   height: 750px;
   object-fit: contain;
@@ -127,6 +124,13 @@ footer {
 }
 
 .carousel-control-prev,
-.carousel-control-next{
+.carousel-control-next {
   width: 30%;
+}
+
+.anchor {
+  display: block;
+  position: relative;
+  top: -76;
+  visibility: hidden;
 }

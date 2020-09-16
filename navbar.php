@@ -10,12 +10,12 @@ echo '
 
 		<div class="collapse navbar-collapse" id="navbarSupportedContent">
 			<ul class="navbar-nav mr-auto">
-				<li class="nav-item"> <a class="nav-link" href="http://localhost/bar/#">Home</a> </li>
-				<li class="nav-item"> <a class="nav-link" href="http://localhost/bar/#our_drinks">Our Drinks</a> </li>
-				<li class="nav-item"> <a class="nav-link" href="http://localhost/bar/#ueber">Über</a></li>
-				<li class="nav-item"> <a class="nav-link" href="http://localhost/bar/#galelrie">Galerie</a></li>
-				<li class="nav-item"> <a class="nav-link" href="http://localhost/bar/#mixology_events">Kurse &amp Events</a></li>
-				<li class="nav-item"> <a class="nav-link" href="http://localhost/bar/#kontakt">Kontakt</a></li>
+				<li class="nav-item"> <a class="nav-link" href="../bar/index.php#">Home</a> </li>
+				<li class="nav-item"> <a class="nav-link" href="../bar/index.php#our_drinks">Our Drinks</a> </li>
+				<li class="nav-item"> <a class="nav-link" href="../bar/index.php#ueber">Über</a></li>
+				<li class="nav-item"> <a class="nav-link" href="../bar/index.php#galelrie">Galerie</a></li>
+				<li class="nav-item"> <a class="nav-link" href="../bar/index.php#mixology_events">Kurse &amp Events</a></li>
+				<li class="nav-item"> <a class="nav-link" href="../bar/index.php#kontakt">Kontakt</a></li>
 			</ul>
 			<ul class="navbar-nav">';
 

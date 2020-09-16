@@ -21,7 +21,7 @@ echo '
 
 
 if (isset($_SESSION['user'])) {
-	echo '<li class="nav-item">Sie sind angemeldet als ' . $_SESSION['user']['username'] . '</li>
+	echo '<li class="nav-text">Sie sind angemeldet als ' . $_SESSION['user']['username'] . '</li>
 		  <li class="nav-item"><a class="nav-link" href="logout.php">Logout</a></li>';
 } else {
 	echo '<li class="nav-item"><a class="nav-link" href="login.php">Login</a></li>

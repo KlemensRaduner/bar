@@ -17,10 +17,11 @@ session_start();
 	<link rel="icon" sizes="76x76" href="images/logo_mybar.png">
 </head>
 
+<?php
+include 'navbar.php';
+?>
+
 <body>
-	<?php
-	include 'navbar.php';
-	?>
 
 	<div class="container-fluid">
 		<div calss="row">

@@ -38,13 +38,30 @@ session_start();
 
 
 	?>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-3">
+			</div>
+			<div class="col-md-6">
 
-	<form action="register_backend.php" method="POST">
-		Login:
-		<input name="username" placeholder="neuer Username"/>
-		<input name="password" type="password" placeholder="neues Passwort"/>
-		<input type="submit" value="Registrieren"/>
-	</form>
+				<form action="register_backend.php" method="POST" class="login-form">
+					<h1>MyBar Registrierung</h1>
+
+					<div class="form-group">
+						<label for="username"></label>
+
+						<input name="username" class="form-control" placeholder="neuer Username" />
+					</div>
+					<div class="form-group">
+						<label for="password"></label>
+						<input name="password" class="form-control" type="password" placeholder="neues Passwort" />
+					</div>
+					<button type="submit" class="btn btn-dark btn-block">Registrieren</button>
+				</form>
+
+			</div>
+		</div>
+	</div>
 
 
 

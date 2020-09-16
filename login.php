@@ -17,12 +17,14 @@ session_start();
 	<link rel="icon" sizes="76x76" href="images/logo_mybar.png">
 </head>
 
+<?php
+include 'navbar.php';
+?>
+
 <body>
 
 
 	<?php
-
-  include 'navbar.php';
 
 	if (isset($_GET['loginfailed'])) {
 		echo '<div class="alert alert-primary" role="alert">
@@ -39,20 +41,20 @@ session_start();
 
 	?>
 
-<h1>MyBar Login</h1>
+	<h1>MyBar Login</h1>
 
-<div class="login">
-	<form action="login_backend.php" method="POST">
-		Login:
-		<input name="username" placeholder="Username"/>
-		<input name="password" type="password" placeholder="Passwort"/>
-		<input type="submit" value="Login"/>
-	</form>
+	<div class="login">
+		<form action="login_backend.php" method="POST">
+			Login:
+			<input name="username" placeholder="Username" />
+			<input name="password" type="password" placeholder="Passwort" />
+			<input type="submit" value="Login" />
+		</form>
 
-	<form action="logout.php" method="POST">
-		<input type="submit" value="Logout"/>
-	</form>
-</div>
+		<form action="logout.php" method="POST">
+			<input type="submit" value="Logout" />
+		</form>
+	</div>
 
 	<?php
 

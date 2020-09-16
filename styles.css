@@ -119,7 +119,6 @@ footer {
   background-color: lightgray;
 }
 
-
 .carousel img {
   height: 750px;
   object-fit: contain;
@@ -127,6 +126,13 @@ footer {
 }
 
 .carousel-control-prev,
-.carousel-control-next{
+.carousel-control-next {
   width: 30%;
+}
+
+.anchor {
+  display: block;
+  position: relative;
+  top: -76;
+  visibility: hidden;
 }

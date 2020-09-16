@@ -25,111 +25,107 @@ include 'navbar.php';
 
 	<div class="container-fluid">
 		<div class="row">
-			<div class="col-md-12">
+			<div class="col-md-2"></div>
+			<div class="col-md-8">
 				<img src="images/bar.jpg" class="background-img">
 			</div>
 		</div>
 
 		<div class="row">
 			<div id="ueber" class="anchor"></div>
-			<div class="col-md-12">
-				<section id="kasten">
-					<h1>Willkommen</h1>
-					Die myBar ist ein Ort der Begegnung, ein Ord des Genusses und der Erholung. Hinter unserer Bar werden Cocktails leidenschaftlich, künstlerisch und manchmal völlig ... neu erfunden. Hier ist der Ort an dem die Uhren nicht ganz so schnell ticken und die Nacht zum leben erwacht.<br>
-					<br>Lassen Sie den Stress vom Alltag vor der Tür und treten Sie ein in unsere einzigartige Gaststube. Damit unsere Gäste sich besonders wohl fühlen können, fördert die myBar einen aktiven Austausch zwischen Bartender und Abnehmer. Unser Mixologen-Team freut sich, Ihnen auch Ihrem persönlichen Gusto entsprechend einen Drink zu zaubern. <br>
-					<br>Stay unique.
-				</section>
+			<div class="col-md-2"></div>
+			<div class="col-md-8">
+				<h1>Willkommen</h1>
+				Die myBar ist ein Ort der Begegnung, ein Ord des Genusses und der Erholung. Hinter unserer Bar werden Cocktails leidenschaftlich, künstlerisch und manchmal völlig ... neu erfunden. Hier ist der Ort an dem die Uhren nicht ganz so schnell ticken und die Nacht zum leben erwacht.<br>
+				<br>Lassen Sie den Stress vom Alltag vor der Tür und treten Sie ein in unsere einzigartige Gaststube. Damit unsere Gäste sich besonders wohl fühlen können, fördert die myBar einen aktiven Austausch zwischen Bartender und Abnehmer. Unser Mixologen-Team freut sich, Ihnen auch Ihrem persönlichen Gusto entsprechend einen Drink zu zaubern. <br>
+				<br>Stay unique.
 
 			</div>
 		</div>
 		<div class="row">
-			<div id="galerie" class="anchor"></div>
-			<div class="col-md-12">
-				<section>
-					<div class="text">
-						<h1>Galerie</h1>
-						Lassen Sie sich von den Impressionen aus unserer Galerie inspirieren.
-					</div>
+			<div id="our_drinks" class="anchor"></div>
+			<div class="col-md-2"></div>
+			<div class="col-md-8">
+				<h1>Galerie</h1>
+				Lassen Sie sich von den Impressionen aus unserer Galerie inspirieren.
 
-					<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-						<ol class="carousel-indicators">
-							<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-							<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-							<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-							<li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
-							<li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
-							<li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
-							<li data-target="#carouselExampleIndicators" data-slide-to="6"></li>
-							<li data-target="#carouselExampleIndicators" data-slide-to="7"></li>
-							<li data-target="#carouselExampleIndicators" data-slide-to="8"></li>
-						</ol>
-						<div class="carousel-inner">
-							<div class="carousel-item active">
-								<img class="d-block w-100" src="images/drink1.jpg" alt="Bild von einem Martini Cocktail">
-							</div>
-							<div class="carousel-item">
-								<img class="d-block w-100" src="images/drink9.jpg" alt="Bild von einem Dark n Stormy Cocktail">
-							</div>
-							<div class="carousel-item">
-								<img class="d-block w-100" src="images/drink3.jpg" alt="Bild von einem Old Fashioned Burbon Cocktail">
-							</div>
-							<div class="carousel-item">
-								<img class="d-block w-100" src="images/drink4.jpg" alt="Bild von einem hazy Rum Cocktail">
-							</div>
-							<div class="carousel-item">
-								<img class="d-block w-100" src="images/drink5.jpg" alt="Bild von einem Mojito Cocktail">
-							</div>
-							<div class="carousel-item">
-								<img class="d-block w-100" src="images/drink6.jpg" alt="Bild von einem Wild Berry Margarita Cocktail">
-							</div>
-							<div class="carousel-item">
-								<img class="d-block w-100" src="images/drink7.jpg" alt="Bild von drei Cocktail Variatioinen">
-							</div>
-							<div class="carousel-item">
-								<img class="d-block w-100" src="images/drink8.jpg" alt="Bild von einem white Cosmopolitan Cocktail">
-							</div>
-							<div class="carousel-item">
-								<img class="d-block w-100" src="images/drink2.jpg" alt="Bild von einem Sandstorm Vermouth Cocktail">
-							</div>
+				<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+					<ol class="carousel-indicators">
+						<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+						<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+						<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+						<li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+						<li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+						<li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
+						<li data-target="#carouselExampleIndicators" data-slide-to="6"></li>
+						<li data-target="#carouselExampleIndicators" data-slide-to="7"></li>
+						<li data-target="#carouselExampleIndicators" data-slide-to="8"></li>
+					</ol>
+					<div class="carousel-inner">
+						<div class="carousel-item active">
+							<img class="d-block w-100" src="images/drink1.jpg" alt="Bild von einem Martini Cocktail">
 						</div>
-						<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-							<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-							<span class="sr-only">Vorheriges</span>
-						</a>
-						<a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-							<span class="carousel-control-next-icon" aria-hidden="true"></span>
-							<span class="sr-only">Nächstes</span>
-						</a>
+						<div class="carousel-item">
+							<img class="d-block w-100" src="images/drink9.jpg" alt="Bild von einem Dark n Stormy Cocktail">
+						</div>
+						<div class="carousel-item">
+							<img class="d-block w-100" src="images/drink3.jpg" alt="Bild von einem Old Fashioned Burbon Cocktail">
+						</div>
+						<div class="carousel-item">
+							<img class="d-block w-100" src="images/drink4.jpg" alt="Bild von einem hazy Rum Cocktail">
+						</div>
+						<div class="carousel-item">
+							<img class="d-block w-100" src="images/drink5.jpg" alt="Bild von einem Mojito Cocktail">
+						</div>
+						<div class="carousel-item">
+							<img class="d-block w-100" src="images/drink6.jpg" alt="Bild von einem Wild Berry Margarita Cocktail">
+						</div>
+						<div class="carousel-item">
+							<img class="d-block w-100" src="images/drink7.jpg" alt="Bild von drei Cocktail Variatioinen">
+						</div>
+						<div class="carousel-item">
+							<img class="d-block w-100" src="images/drink8.jpg" alt="Bild von einem white Cosmopolitan Cocktail">
+						</div>
+						<div class="carousel-item">
+							<img class="d-block w-100" src="images/drink2.jpg" alt="Bild von einem Sandstorm Vermouth Cocktail">
+						</div>
 					</div>
-				</section>
-
+					<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+						<span class="sr-only">Vorheriges</span>
+					</a>
+					<a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+						<span class="carousel-control-next-icon" aria-hidden="true"></span>
+						<span class="sr-only">Nächstes</span>
+					</a>
+				</div>
 			</div>
 		</div>
 		<div class="row">
 			<div id="mixology_events" class="anchor"></div>
-			<div class="col-md-12">
-				<div class="text">
-					<section>
-						<h1>Mixkurse</h1>
-						<p>Ist Ihr Traum das Mixen und Servieren von selbstgemachten Drinks? Wir als myBar bieten für motivierte Anfänger oder Fortgeschrittene Teilnehmer unter fachkundiger Anleitung diverse Mixkurse. Im Kurs erhalten Sie alle Informationen rund um den Job des Bartenders (Barutensilien, Arbeitstechniken, etc.).<br>
-							<br>Feiern Sie Ihren Team-Event, Geburtstag oder Polterabend bei uns! Ein Besuch in der "myBar" lohnt sich und macht Ihren Event zum unvergesslichen Erlebnis. Weiterhin wird für das Wohl unserer Gäste natürlich tüchtig gesorgt, durstig verlässt uns Keiner. Sie können ganz einfach einen Termin bei uns vereinbaren. Die Mindestanzahl Teilnehmer beträgt 6 Personen, wobei der Preis pro Person CHF 100.- ist.<br>
-							<br>Anmeldung
-
-					</section>
-					<p></p>
-					<section id="kontakt">
-						<h1>Kontakt</h1>
-						<p>Telefon: +41 44 340 25 65<br></p>
-						<p><br>Email: <a href="mailto:daniela@altorfer.org">daniela@altorfer.org</a></p>
-						<p><br>Adresse: Im Obstgarten 18c 8602 Wangen bei Dübendorf"<br></p>
-						<p><br>Ansicht auf GoogleMaps:<br></p>
-						<p><iframe width="475" height="475" id="gmap_canvas" src="https://maps.google.com/maps?q=Im%20Obstgarten%2018c%208602%20Wangen&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe></p>
-					</section>
-				</div>
-
+			<div class="col-md-2"></div>
+			<div class="col-md-8">
+				<h1>Mixkurse</h1>
+				<p>Ist Ihr Traum das Mixen und Servieren von selbstgemachten Drinks? Wir als myBar bieten für motivierte Anfänger oder Fortgeschrittene Teilnehmer unter fachkundiger Anleitung diverse Mixkurse. Im Kurs erhalten Sie alle Informationen rund um den Job des Bartenders (Barutensilien, Arbeitstechniken, etc.).<br>
+					<br>Feiern Sie Ihren Team-Event, Geburtstag oder Polterabend bei uns! Ein Besuch in der "myBar" lohnt sich und macht Ihren Event zum unvergesslichen Erlebnis. Weiterhin wird für das Wohl unserer Gäste natürlich tüchtig gesorgt, durstig verlässt uns Keiner. Sie können ganz einfach einen Termin bei uns vereinbaren. Die Mindestanzahl Teilnehmer beträgt 6 Personen, wobei der Preis pro Person CHF 100.- ist.<br>
+					<br>Anmeldung
 			</div>
+
 		</div>
 
+		<div class="row">
+			<div id="mixology_events" class="anchor"></div>
+			<div class="col-md-2">
+				<div class="col-md-8">
+					<h1>Kontakt</h1>
+					<p>Telefon: +41 44 340 25 65<br></p>
+					<p><br>Email: <a href="mailto:daniela@altorfer.org">daniela@altorfer.org</a></p>
+					<p><br>Adresse: Im Obstgarten 18c 8602 Wangen bei Dübendorf"<br></p>
+					<p><br>Ansicht auf GoogleMaps:<br></p>
+					<p><iframe width="475" height="475" id="gmap_canvas" src="https://maps.google.com/maps?q=Im%20Obstgarten%2018c%208602%20Wangen&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe></p>
+				</div>
+			</div>
+		</div>
 
 		<?php
 

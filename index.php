@@ -29,11 +29,7 @@ include 'navbar.php';
 				<img src="images/bar.jpg" class="background-img">
 			</div>
 		</div>
-		<div id="our_drinks" class="row">
-			<div class="col-md-12">
-				our drinks
-			</div>
-		</div>
+
 		<div id="ueber" class="row">
 			<div class="col-md-12">
 				<section id="kasten">
@@ -45,32 +41,57 @@ include 'navbar.php';
 
 			</div>
 		</div>
-		<div id="galerie" class="row">
+		<div class="row">
 			<div class="col-md-12">
-				<div class="text">
-					<h1>Galerie</h1>
-					Lassen Sie sich von den Impressionen aus unserer Galerie inspirieren.
-				</div>
 				<section id="galerie">
-					<div class="flex-container">
-						<a href="images/drink1.jpg">
-							<img src="images/drink1.jpg" alt="Bild von einem Martini Cocktail"></a>
-						<a href="images/drink9.jpg">
-							<img src="drink9.jpg" alt="Bild von einem Dark n Stormy Cocktail"></a>
-						<a href="images/drink3.jpg">
-							<img src="images/drink3.jpg" alt="Bild von einem Old Fashioned Burbon Cocktail"></a>
-						<a href="images/drink4.jpg">
-							<img src="images/drink4.jpg" alt="Bild von einem hazy Rum Cocktail"></a>
-						<a href="images/drink5.jpg">
-							<img src="images/drink5.jpg" alt="Bild von einem Mojito Cocktail"></a>
-						<a href="images/drink6.jpg">
-							<img src="images/drink6.jpg" alt="Bild von einem Wild Berry Margarita Cocktail"></a>
-						<a href="images/drink7.jpg">
-							<img src="images/drink7.jpg" alt="Bild von drei Cocktail Variatioinen"></a>
-						<a href="images/drink8.jpg">
-							<img src="images/drink8.jpg" alt="Bild von einem white Cosmopolitan Cocktail"></a>
-						<a href="images/drink2.jpg">
-							<img src="images/drink2.jpg" alt="Bild von einem Sandstorm Vermouth Cocktail"></a>
+					<div class="text">
+						<h1>Galerie</h1>
+						Lassen Sie sich von den Impressionen aus unserer Galerie inspirieren.
+					</div>
+
+					<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+						<ol class="carousel-indicators">
+							<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+							<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+							<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+						</ol>
+						<div class="carousel-inner">
+							<div class="carousel-item active">
+								<img class="d-block w-100" src="images/drink1.jpg" alt="Bild von einem Martini Cocktail">
+							</div>
+							<div class="carousel-item">
+								<img class="d-block w-100" src="drink9.jpg" alt="Bild von einem Dark n Stormy Cocktail">
+							</div>
+							<div class="carousel-item">
+								<img class="d-block w-100" src="images/drink3.jpg" alt="Bild von einem Old Fashioned Burbon Cocktail">
+							</div>
+							<div class="carousel-item">
+								<img class="d-block w-100" src="images/drink4.jpg" alt="Bild von einem hazy Rum Cocktail">
+							</div>
+							<div class="carousel-item">
+								<img class="d-block w-100" src="images/drink5.jpg" alt="Bild von einem Mojito Cocktail">
+							</div>
+							<div class="carousel-item">
+								<img class="d-block w-100" src="images/drink6.jpg" alt="Bild von einem Wild Berry Margarita Cocktail">
+							</div>
+							<div class="carousel-item">
+								<img class="d-block w-100" src="images/drink7.jpg" alt="Bild von drei Cocktail Variatioinen">
+							</div>
+							<div class="carousel-item">
+								<img class="d-block w-100" src="images/drink8.jpg" alt="Bild von einem white Cosmopolitan Cocktail">
+							</div>
+							<div class="carousel-item">
+								<img class="d-block w-100" src="images/drink2.jpg" alt="Bild von einem Sandstorm Vermouth Cocktail">
+							</div>
+						</div>
+						<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+							<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+							<span class="sr-only">Vorheriges</span>
+						</a>
+						<a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+							<span class="carousel-control-next-icon" aria-hidden="true"></span>
+							<span class="sr-only">Nächstes</span>
+						</a>
 					</div>
 				</section>
 
@@ -100,53 +121,48 @@ include 'navbar.php';
 
 			</div>
 		</div>
-		<div id="kontakt" class="row">
-			<div class="col-md-12">
-				kontakt
-			</div>
-		</div>
-	</div>
-
-	<?php
-
-	if (isset($_SESSION['user'])) {
-		$result = $conn->query("SELECT * FROM course");
-
-		if ($result->num_rows > 0) {
-			while ($row = $result->fetch_assoc()) {
-				echo "<div><span>" . $row['name'] . "</span><span>" . $row['id'] . "</span><form action='signup.php?id=" . $row['id'] . "' method='POST'><input type='submit'/></form></div>";
-			}
-		}
-	}
 
 
-	?>
+		<?php
 
-	<button onclick="topFunction()" id="TopButton" title="Nach oben gehen">Nach oben</button>
-	<script>
-		var mybutton = document.getElementById("TopButton");
-		window.onscroll = function() {
-			scrollFunction()
-		};
+		if (isset($_SESSION['user'])) {
+			$result = $conn->query("SELECT * FROM course");
 
-		function scrollFunction() {
-			if (document.body.scrollTop > 15 || document.documentElement.scrollTop > 15) {
-				mybutton.style.display = "block";
-			} else {
-				mybutton.style.display = "none";
+			if ($result->num_rows > 0) {
+				while ($row = $result->fetch_assoc()) {
+					echo "<div><span>" . $row['name'] . "</span><span>" . $row['id'] . "</span><form action='signup.php?id=" . $row['id'] . "' method='POST'><input type='submit'/></form></div>";
+				}
 			}
 		}
 
-		function topFunction() {
-			document.body.scrollTop = 0;
-			document.documentElement.scrollTop = 0;
-		}
-	</script>
 
-	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-	<footer>
-		<p>&copy; 2020, Altorfer, Freitag, Raduner </p>
-	</footer>
+		?>
+
+		<button onclick="topFunction()" id="TopButton" title="Nach oben gehen">Nach oben</button>
+		<script>
+			var mybutton = document.getElementById("TopButton");
+			window.onscroll = function() {
+				scrollFunction()
+			};
+
+			function scrollFunction() {
+				if (document.body.scrollTop > 15 || document.documentElement.scrollTop > 15) {
+					mybutton.style.display = "block";
+				} else {
+					mybutton.style.display = "none";
+				}
+			}
+
+			function topFunction() {
+				document.body.scrollTop = 0;
+				document.documentElement.scrollTop = 0;
+			}
+		</script>
+
+		<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+		<footer>
+			<p>&copy; 2020, Altorfer, Freitag, Raduner </p>
+		</footer>
 </body>

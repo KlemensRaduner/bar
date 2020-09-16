@@ -65,3 +65,52 @@ html {
 #TopButton:hover {
   background-color: rgb(77, 67, 67);
 }
+
+#galerie{
+	margin:0 auto;
+}
+.flex-container{
+	display:flex;
+	flex-wrap: wrap;
+	background-color:#fff;
+	width:1200px;
+	margin: auto;
+	text-align:center;
+}
+.flex-container a{
+	width:33.33%;
+	text-align: center;
+	margin:0;
+	}
+	.flex-container a:hover{
+		transform: scale(1.03);
+		z-index:1;
+	}
+
+
+body{
+	margin:0;
+	
+}
+.text{
+	text-align:center;
+	margin: 30%;
+	margin: 30%;
+	color:#333;
+}
+h1{
+	font-variant:small-caps;
+	font-size: 25px;
+	position:center;
+}
+
+  #mixology_events, #ueber, #kontakt{
+    font-family: sans-serif,arial;
+  }
+  iframe{
+    border: 2.5px solid #333;
+  }
+  
+  footer{
+    text-align: center;
+  }

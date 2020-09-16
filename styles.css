@@ -42,3 +42,14 @@
 #TopButton:hover {
   background-color: rgb(77, 67, 67);
 }
+#kasten{
+	color: #333;
+	text-align:center;
+	border: 2.5px solid #333;
+	margin: auto;
+	position: absolute;
+	margin-top:-550px;
+	border-radius:2px;
+	background-color:none;
+
+}

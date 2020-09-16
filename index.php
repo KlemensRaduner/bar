@@ -28,11 +28,18 @@ session_start();
 				<img src="images/bar.jpg" class="background-img">
 			</div>
 		</div>
+
 		<div calss="row our_drinks">
 			<div class="col-md-12">
 				our drinks
 			</div>
 		</div>
+		<section id="kasten">
+		<h1>Willkommen</h1>
+			Die myBar ist ein Ort der Begegnung, ein Ord des Genusses und der Erholung. Hinter unserer Bar werden Cocktails leidenschaftlich, künstlerisch und manchmal völlig ... neu erfunden. Hier ist der Ort an dem die Uhren nicht ganz so schnell ticken und die Nacht zum leben erwacht.<br>
+			<br>Lassen Sie den Stress vom Alltag vor der Tür und treten Sie ein in unsere einzigartige Gaststube. Damit unsere Gäste sich besonders wohl fühlen können, fördert die myBar einen aktiven Austausch zwischen Bartender und Abnehmer. Unser Mixologen-Team freut sich, Ihnen auch Ihrem persönlichen Gusto entsprechend einen Drink zu zaubern. <br>
+			<br>Stay unique.
+	</section>
 		<div calss="row ueber">
 			<div class="col-md-12">
 				über

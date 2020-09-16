@@ -36,7 +36,6 @@ include 'navbar.php';
 		</div>
 		<div id="ueber" class="row">
 			<div class="col-md-12">
-				<p style="height:400px">über</p>
 				<section id="kasten">
 					<h1>Willkommen</h1>
 					Die myBar ist ein Ort der Begegnung, ein Ord des Genusses und der Erholung. Hinter unserer Bar werden Cocktails leidenschaftlich, künstlerisch und manchmal völlig ... neu erfunden. Hier ist der Ort an dem die Uhren nicht ganz so schnell ticken und die Nacht zum leben erwacht.<br>
@@ -48,7 +47,6 @@ include 'navbar.php';
 		</div>
 		<div id="galerie" class="row">
 			<div class="col-md-12">
-				<p style="height:400px">galerie</p>
 				<div class="text">
 					<h1>Galerie</h1>
 					Lassen Sie sich von den Impressionen aus unserer Galerie inspirieren.
@@ -80,7 +78,6 @@ include 'navbar.php';
 		</div>
 		<div id="mixology_events" class="row">
 			<div class="col-md-12">
-				<p style="height:400px">mixology_events </p>
 				<div class="text">
 					<section id="mixology_events">
 						<h1>Mixkurse</h1>

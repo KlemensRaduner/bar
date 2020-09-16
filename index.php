@@ -29,22 +29,17 @@ include 'navbar.php';
 				<img src="images/bar.jpg" class="background-img">
 			</div>
 		</div>
-		<div id="our_drinks" class="row">
-			<div class="col-md-12">
-				our drinks
-			</div>
-		</div>
+
 		<div id="ueber" class="row">
-			<div class="col-md-12">
-				<p style="height:400px">über</p>
-	<section id="kasten">
-		<h1>Willkommen</h1>
+		<div class="col-md-12">
+				<p style="height:400px">galerie</p>
+				<div class="text">
+				<h1>Willkommen</h1>
 			Die myBar ist ein Ort der Begegnung, ein Ord des Genusses und der Erholung. Hinter unserer Bar werden Cocktails leidenschaftlich, künstlerisch und manchmal völlig ... neu erfunden. Hier ist der Ort an dem die Uhren nicht ganz so schnell ticken und die Nacht zum leben erwacht.<br>
 			<br>Lassen Sie den Stress vom Alltag vor der Tür und treten Sie ein in unsere einzigartige Gaststube. Damit unsere Gäste sich besonders wohl fühlen können, fördert die myBar einen aktiven Austausch zwischen Bartender und Abnehmer. Unser Mixologen-Team freut sich, Ihnen auch Ihrem persönlichen Gusto entsprechend einen Drink zu zaubern. <br>
 			<br>Stay unique.
-	</section>
-
-			</div>
+		</div>
+		</div>
 		</div>
 		<div id="galerie" class="row">
 			<div class="col-md-12">
@@ -90,7 +85,7 @@ include 'navbar.php';
 				<a href="mailto:daniela@altorfer.org">daniela@altorfer.org</a><br>
 				<a href="#login_registrieren">Login/Registrieren</a></p><br>
 	</section>
-	<p></p>
+
 	<section id="kontakt">
 		<h1>Kontakt</h1>
 			<p>Telefon:	+41 44 340 25 65<br></p>
@@ -103,13 +98,8 @@ include 'navbar.php';
 
 			</div>
 		</div>
-		<div id="kontakt" class="row">
-			<div class="col-md-12">
-				kontakt
-			</div>
-		</div>
-	</div>
 
+ 
 	<?php
 
 	if (isset($_SESSION['user'])) {

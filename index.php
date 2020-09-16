@@ -24,7 +24,7 @@ include 'navbar.php';
 <body>
 
 	<div class="container-fluid">
-		<div calss="row">
+		<div class="row">
 			<div class="col-md-12">
 				<img src="images/bar.jpg" class="background-img">
 			</div>

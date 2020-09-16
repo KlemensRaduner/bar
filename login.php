@@ -41,20 +41,29 @@ include 'navbar.php';
 
 	?>
 
-	<h1>MyBar Login</h1>
 
-	<div class="login">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-3">
+		  </div>
+			<div class="col-md-6">
+		<h1>MyBar Login</h1>
+
 		<form action="login_backend.php" method="POST">
-			Login:
-			<input name="username" placeholder="Username" />
-			<input name="password" type="password" placeholder="Passwort" />
-			<input type="submit" value="Login" />
+			<div class="form-group">
+				<label for="username"></label>
+			<input name="username"  class="form-control" placeholder="Username" />
+		</div>
+		<div class="form-group">
+			<label for="password"></label>
+			<input name="password" class="form-control" type="password" placeholder="Passwort" />
+		</div>
+		<button type="submit" class="btn btn-dark btn-block">Login</button>
 		</form>
 
-		<form action="logout.php" method="POST">
-			<input type="submit" value="Logout" />
-		</form>
 	</div>
+</div>
+</div>
 
 	<?php
 

@@ -2,8 +2,12 @@ html {
   scroll-behavior: smooth;
 }
 
-.container-fluid {
+.login-form {
   padding-top: 5%;
+}
+
+.container-fluid {
+  padding-top: 0;
   margin: 0;
 }
 

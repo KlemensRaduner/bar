@@ -14,7 +14,7 @@ session_start();
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 	<link rel="stylesheet" href="styles.css">
-	<link rel="icon" sizes="76x76" href="images/logo_mybar.png">
+	<link rel="icon" sizes="76x76" href="images/logo_mybar_brown.png">
 </head>
 
 <?php
@@ -47,7 +47,7 @@ include 'navbar.php';
 			<div class="col-md-8">
 				<h1>Galerie</h1>
 				<p>Lassen Sie sich von den Impressionen aus unserer Galerie inspirieren.</p>
-				<p><a href="our_drinks.pdf" download>Download</a></p>
+				<p><a href="Speisekarte_Download.pdf" download>Download</a></p>
 			</div>
 			<div class="col-md-12">
 				<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">

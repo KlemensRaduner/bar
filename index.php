@@ -122,22 +122,37 @@ include 'navbar.php';
 					<tr>
 						<th>Name</th>
 						<th>Beschreibung</th>
-						<th>Teilnehmer</th>
+						<th class="text-center">Teilnehmer</th>
 						<?php
 						if (isset($_SESSION['user'])) {
-							echo "<th>anmelden</th>";
+							echo "<th class='text-center'>anmelden</th>";
 						}
 						?>
 					</tr>
 				</thead>
 				<tbody>
 					<?php
-					$result = $conn->query("SELECT * FROM course");
-					if ($result->num_rows > 0) {
-						while ($row = $result->fetch_assoc()) {
-							echo "<tr><td>" . $row['name'] . "</td><td>" . $row['description'] . "<td>0/20</td>";
+					$courses_result = $conn->query("SELECT * FROM course");
+					if ($courses_result->num_rows > 0) {
+						while ($courses_row = $courses_result->fetch_assoc()) {
+							$users_result = $conn->query("SELECT * FROM course_users WHERE course_id = " . $courses_row['id']);
+							echo "<tr id=" . $courses_row['id'] . ">";
+							echo "<td class='align-middle'>" . $courses_row['name'] . "</td>";
+							echo "<td class='align-middle'>" . $courses_row['description'] . "</td>";
+							echo "<td class='align-middle text-center'>" . $users_result->num_rows . "/" . $courses_row['space'] . "</td>";
 							if (isset($_SESSION['user'])) {
-								echo "<td>button</td>";
+								$found = false;
+								while ($users_row = $users_result->fetch_assoc()) {
+									if ($users_row['users_id'] == $_SESSION['user']['id']) {
+										$found = true;
+										break;
+									}
+								}
+								if ($found) {
+									echo "<td class='align-middle text-center'><button onClick='signup(" . $courses_row['id'] . ")' class='btn btn-danger'>abmelden</button></form></td>";
+								} else {
+									echo "<td class='align-middle text-center'><button onClick='signup(" . $courses_row['id'] . ")' class='btn btn-dark'>anmelden</button></form></td>";
+								}
 							}
 							echo "</tr>";
 						}
@@ -167,7 +182,9 @@ include 'navbar.php';
 		<p>&copy; 2020, Altorfer, Freitag, Raduner </p>
 	</footer>
 	<button onclick="topFunction()" id="TopButton" title="Nach oben gehen">Nach oben</button>
-	<script src="scroll.js" />
+
+	<script src="scroll.js"></script>
+	<script src="signup.js"></script>
 	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>

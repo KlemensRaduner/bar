@@ -139,7 +139,7 @@ include 'navbar.php';
 							echo "<tr id=" . $courses_row['id'] . ">";
 							echo "<td class='align-middle'>" . $courses_row['name'] . "</td>";
 							echo "<td class='align-middle'>" . $courses_row['description'] . "</td>";
-							echo "<td class='align-middle text-center'>" . $users_result->num_rows . "/" . $courses_row['space'] . "</td>";
+							echo "<td class='align-middle text-center' name='spaces'><span name='freeSpaces'>" . $users_result->num_rows . "</span>/" . $courses_row['space'] . "</td>";
 							if (isset($_SESSION['user'])) {
 								$found = false;
 								while ($users_row = $users_result->fetch_assoc()) {
@@ -149,9 +149,9 @@ include 'navbar.php';
 									}
 								}
 								if ($found) {
-									echo "<td class='align-middle text-center'><button onClick='signup(" . $courses_row['id'] . ")' class='btn btn-danger'>abmelden</button></form></td>";
+									echo "<td class='align-middle text-center'><button onClick='signout(" . $courses_row['id'] . ")' class='btn btn-danger'>abmelden</button></form></td>";
 								} else {
-									echo "<td class='align-middle text-center'><button onClick='signup(" . $courses_row['id'] . ")' class='btn btn-dark'>anmelden</button></form></td>";
+									echo "<td class='align-middle text-center'><button onClick='sigup(" . $courses_row['id'] . ")' class='btn btn-dark'>anmelden</button></form></td>";
 								}
 							}
 							echo "</tr>";

@@ -47,7 +47,7 @@ include 'navbar.php';
 			<div class="col-md-8">
 				<h1>Galerie</h1>
 				<p>Lassen Sie sich von den Impressionen aus unserer Galerie inspirieren.</p>
-				<p><a href="our_drinks.pdf" download>Download</a></p>
+				<p><a href="Speisekarte_Download.pdf" download>Download</a></p>
 			</div>
 			<div class="col-md-12">
 				<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">

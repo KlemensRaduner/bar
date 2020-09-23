@@ -2,6 +2,32 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  margin: 0;
+}
+
+h1 {
+  font-variant: small-caps;
+  font-size: 2.5em;
+  text-align: center;
+  margin: 16px;
+}
+
+p {
+  text-align: center;
+}
+
+iframe {
+  border: 2.5px solid #333;
+}
+
+footer {
+  text-align: center;
+}
+
+.row {
+  margin: 0;
+}
 .login-form {
   padding-top: 5%;
 }
@@ -85,29 +111,6 @@ html {
 .flex-container a:hover {
   transform: scale(1.03);
   z-index: 1;
-}
-
-body {
-  margin: 0;
-}
-
-h1 {
-  font-variant: small-caps;
-  font-size: 25px;
-  position: center;
-}
-
-#mixology_events,
-#ueber,
-#kontakt {
-  font-family: sans-serif, arial;
-}
-iframe {
-  border: 2.5px solid #333;
-}
-
-footer {
-  text-align: center;
 }
 
 .carousel {

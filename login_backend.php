@@ -31,10 +31,10 @@ if (isset($_POST)) {
         session_start();
         $_SESSION['user'] = $user;
         $_SESSION['courses'] = $courses;
-        header('Location:profil.php');
+        header('Location:index.php#mixology_events');
         die();
     } else {
-        header('Location:index.php?loginfailed');
+        header('Location:login.php?loginfailed');
         die();
     }
 }

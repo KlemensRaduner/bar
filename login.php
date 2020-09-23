@@ -32,13 +32,6 @@ include 'navbar.php';
 			</div>';
 	}
 
-	if (isset($_GET['registered'])) {
-		echo '<div class="alert alert-primary" role="alert">
-				A simple primary alert—check it out!
-			</div>';
-	}
-
-
 	?>
 
 
@@ -66,20 +59,6 @@ include 'navbar.php';
 		</div>
 	</div>
 
-	<?php
-
-	if (isset($_SESSION['user'])) {
-		$result = $conn->query("SELECT * FROM course");
-
-		if ($result->num_rows > 0) {
-			while ($row = $result->fetch_assoc()) {
-				echo "<div><span>" . $row['name'] . "</span><span>" . $row['id'] . "</span><form action='signup.php?id=" . $row['id'] . "' method='POST'><input type='submit'/></form></div>";
-			}
-		}
-	}
-
-
-	?>
 
 
 

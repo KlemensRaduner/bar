@@ -120,26 +120,32 @@ include 'navbar.php';
 			<table class="table">
 				<thead>
 					<tr>
+						<th>Datum</th>
 						<th>Name</th>
 						<th>Beschreibung</th>
 						<th class="text-center">Teilnehmer</th>
+						<th>Preis</th>
 						<?php
+
 						if (isset($_SESSION['user'])) {
 							echo "<th class='text-center'>anmelden</th>";
 						}
 						?>
+
 					</tr>
 				</thead>
 				<tbody>
 					<?php
-					$courses_result = $conn->query("SELECT * FROM course");
+					$courses_result = $conn->query("SELECT * FROM course WHERE open=true ORDER BY date");
 					if ($courses_result->num_rows > 0) {
 						while ($courses_row = $courses_result->fetch_assoc()) {
 							$users_result = $conn->query("SELECT * FROM course_users WHERE course_id = " . $courses_row['id']);
 							echo "<tr id=" . $courses_row['id'] . ">";
+							echo "<td class='align-middle'>" . $courses_row['date'] . "</td>";
 							echo "<td class='align-middle'>" . $courses_row['name'] . "</td>";
 							echo "<td class='align-middle'>" . $courses_row['description'] . "</td>";
 							echo "<td class='align-middle text-center' name='spaces'><span name='freeSpaces'>" . $users_result->num_rows . "</span>/" . $courses_row['space'] . "</td>";
+							echo "<td>" . $courses_row['price'] . " CHF</td>";
 							if (isset($_SESSION['user'])) {
 								$found = false;
 								while ($users_row = $users_result->fetch_assoc()) {
@@ -154,6 +160,7 @@ include 'navbar.php';
 									echo "<td class='align-middle text-center'><button onClick='signup(" . $courses_row['id'] . ")' class='btn btn-dark'>anmelden</button></form></td>";
 								}
 							}
+
 							echo "</tr>";
 						}
 					}

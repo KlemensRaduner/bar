@@ -13,7 +13,7 @@ session_start();
 	<meta name="author" content="Daniela Carolina Altorfer">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-	<link id="pagestyle" href="styles.css" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" href="styles.css">
 	<link rel="icon" sizes="76x76" href="images/logo_mybar_blaqq.png">
 </head>
 
@@ -35,7 +35,7 @@ include 'navbar.php';
 			<div class="col-md-2"></div>
 			<div class="col-md-8">
 				<h1>Willkommen</h1>
-				<p>Die myBar ist ein Ort der Begegnung, ein Ord des Genusses und der Erholung. Hinter unserer Bar werden Cocktails leidenschaftlich, künstlerisch und manchmal völlig ... neu erfunden. Hier ist der Ort an dem die Uhren nicht ganz so schnell ticken und die Nacht zum leben erwacht.<br>
+				<p>Die myBar ist ein Ort der Begegnung, ein Ort des Genusses und der Erholung. Hinter unserer Bar werden Cocktails leidenschaftlich, künstlerisch und manchmal völlig ... neu erfunden. Hier ist der Ort an dem die Uhren nicht ganz so schnell ticken und die Nacht zum leben erwacht.<br>
 					<br>Lassen Sie den Stress vom Alltag vor der Tür und treten Sie ein in unsere einzigartige Gaststube. Damit unsere Gäste sich besonders wohl fühlen können, fördert die myBar einen aktiven Austausch zwischen Bartender und Abnehmer. Unser Mixologen-Team freut sich, Ihnen auch Ihrem persönlichen Gusto entsprechend einen Drink zu zaubern. <br>
 					<br>Stay unique.
 				</p>
@@ -136,28 +136,22 @@ include 'navbar.php';
 				</thead>
 				<tbody>
 					<?php
-					$courses_result = $conn->query("SELECT * FROM course WHERE open=true ORDER BY date");
-					if ($courses_result->num_rows > 0) {
-						while ($courses_row = $courses_result->fetch_assoc()) {
-							$users_result = $conn->query("SELECT * FROM course_users WHERE course_id = " . $courses_row['id']);
-							echo "<tr id=" . $courses_row['id'] . ">";
-							echo "<td class='align-middle'>" . $courses_row['date'] . "</td>";
-							echo "<td class='align-middle'>" . $courses_row['name'] . "</td>";
-							echo "<td class='align-middle'>" . $courses_row['description'] . "</td>";
-							echo "<td class='align-middle text-center' name='spaces'><span name='freeSpaces'>" . $users_result->num_rows . "</span>/" . $courses_row['space'] . "</td>";
-							echo "<td>" . $courses_row['price'] . " CHF</td>";
+
+					$courses = getCourses();
+					if (count($courses) > 0) {
+						foreach ($courses as $course) {
+							$users_in_course = getUsersInCourse($course['id']);
+							echo "<tr id=" . $course['id'] . ">";
+							echo "<td class='align-middle'>" . $course['date'] . "</td>";
+							echo "<td class='align-middle'>" . $course['name'] . "</td>";
+							echo "<td class='align-middle'>" . $course['description'] . "</td>";
+							echo "<td class='align-middle text-center' name='spaces'><span name='freeSpaces'>" . count($users_in_course) . "</span>/" . $course['space'] . "</td>";
+							echo "<td>" . $course['price'] . " CHF</td>";
 							if (isset($_SESSION['user'])) {
-								$found = false;
-								while ($users_row = $users_result->fetch_assoc()) {
-									if ($users_row['users_id'] == $_SESSION['user']['id']) {
-										$found = true;
-										break;
-									}
-								}
-								if ($found) {
-									echo "<td class='align-middle text-center'><button onClick='signout(" . $courses_row['id'] . ")' class='btn btn-danger'>abmelden</button></form></td>";
+								if (isUserInList($users_in_course)) {
+									echo "<td class='align-middle text-center'><button onClick='signout(" . $course['id'] . ")' class='btn btn-danger'>abmelden</button></form></td>";
 								} else {
-									echo "<td class='align-middle text-center'><button onClick='signup(" . $courses_row['id'] . ")' class='btn btn-dark'>anmelden</button></form></td>";
+									echo "<td class='align-middle text-center'><button onClick='signup(" . $course['id'] . ")' class='btn btn-dark'>anmelden</button></form></td>";
 								}
 							}
 
@@ -192,7 +186,6 @@ include 'navbar.php';
 
 	<script src="scripts/scroll.js"></script>
 	<script src="scripts/signup.js"></script>
-	<script src="scripts/styles.js"></script>
 	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>

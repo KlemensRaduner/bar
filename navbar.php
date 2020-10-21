@@ -16,8 +16,7 @@ echo '
 				<li class="nav-item"> <a class="nav-link" href="../bar/index.php#mixology_events">Kurse &amp Events</a></li>
 				<li class="nav-item"> <a class="nav-link" href="../bar/index.php#kontakt">Kontakt</a></li>
 			</ul>
-			<ul class="navbar-nav">
-			<li class="nav-item"> <button onclick="swapStyles();">style</button></li>';
+			<ul class="navbar-nav">';
 
 if (isset($_SESSION['user'])) {
 	echo '<li class="nav-text">Sie sind angemeldet als ' . $_SESSION['user']['username'] . '</li>

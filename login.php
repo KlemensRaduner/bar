@@ -23,17 +23,13 @@ include 'navbar.php';
 
 <body>
 
-
 	<?php
-
 	if (isset($_GET['loginfailed'])) {
 		echo '<div class="alert alert-primary" role="alert">
 				dum dum
 			</div>';
 	}
-
 	?>
-
 
 	<div class="container-fluid">
 		<div class="row">
@@ -54,7 +50,6 @@ include 'navbar.php';
 					</div>
 					<button type="submit" class="btn btn-dark btn-block">Login</button>
 				</form>
-
 			</div>
 		</div>
 	</div>

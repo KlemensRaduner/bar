@@ -18,7 +18,6 @@ echo '
 			</ul>
 			<ul class="navbar-nav">';
 
-
 if (isset($_SESSION['user'])) {
 	echo '<li class="nav-text">Sie sind angemeldet als ' . $_SESSION['user']['username'] . '</li>
 		  <li class="nav-item"><a class="nav-link" href="logout.php">Logout</a></li>';
